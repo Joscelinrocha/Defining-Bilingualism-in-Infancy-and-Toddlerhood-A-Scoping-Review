@@ -1,0 +1,81 @@
+---
+title: "Map_graph"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(papaja)
+library(ggthemes)
+library(tidyverse)
+library(here)
+library(knitr)
+library(kableExtra)
+library(english)
+library(PRISMAstatement)
+library(DiagrammeR)
+library(vtree)
+library(ggthemes)
+library(wesanderson)
+library(reshape2)  
+library(ggplot2)
+library(mapproj)
+library(viridis)
+library(ggrepel)
+library(maps)
+
+
+data <- read_csv("Step2_data/geo_data.csv")
+```
+
+```{r}
+
+world <- map_data("world")
+
+data2<- data %>%
+  filter(!is.na(latitude)) %>%
+  group_by(country,latitude,longitude,languages) %>%
+  summarise(freq = n())
+
+
+# coord_map()  <- this guy gives me a line on the top -.-
+
+world <- map_data("world")
+
+data2<- data %>%
+  filter(!is.na(latitude)) %>%
+  group_by(country,latitude,longitude,languages) %>%
+  summarise(freq = n())
+
+data2$freq2 <- as.factor(data2$freq)
+
+
+data2 %>%
+  ggplot() +
+    geom_polygon(data = world, aes(x=long, y = lat, group = group), fill="grey", alpha=0.3) +
+  geom_point( data=data2, aes(x=longitude, y=latitude, size=freq, color=freq2), shape=20, stroke=FALSE) +
+    scale_fill_viridis(option="magma") +
+      scale_size_continuous(range=c(6,12), guide = FALSE) +
+  scale_color_discrete(name="Frequency    " )+
+    scale_alpha_continuous(name="Frequency" ,  range=c(0.5, .9)) +  theme_void() + geom_text_repel( data=data2, aes(x=longitude, y=latitude, label=languages), size=5) +
+    theme(
+          text = element_text(color = "#22211d"), legend.text=element_text(size=15),
+          legend.title = element_text(size = 14,face="bold"))+
+  guides(color = guide_legend(override.aes = list(size = 8))) 
+
+ggsave("Figures/Figure 2.png", width = 36, height = 22, units = "cm")
+
+
+
+```
+
+
+
+```
+
+

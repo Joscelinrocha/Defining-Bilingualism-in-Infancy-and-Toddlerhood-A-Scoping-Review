@@ -1,0 +1,177 @@
+"","code","study_num","new_code","languages","label","country","abb_country","latitude","longitude"
+"1",1,"1","1_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"2",2,"1","2_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"3",3,"1","3_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"4",4,"1","4_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"5",5,"3","5_3","English","country_1","Australia","AU",-25.274398,133.775136
+"6",5,"4","5_4","English","country_1","Australia","AU",-25.274398,133.775136
+"7",6,"3","6_3","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"8",7,"1","7_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"9",8,"1","8_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"10",9,"1","9_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"11",10,"1","10_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"12",11,"1","11_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"13",12,"1","12_1","English","country_1","Australia","AU",-25.274398,133.775136
+"14",12,"2","12_2","English","country_1","Australia","AU",-25.274398,133.775136
+"15",13,"1","13_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"16",14,"1","14_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"17",15,"1","15_1","Dutch, Other","country_1","Netherlands","NL",52.132633,5.291266
+"18",15,"2","15_2","Dutch, Other","country_1","Netherlands","NL",52.132633,5.291266
+"19",16,"1","16_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"20",17,"1","17_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"21",17,"2","17_2","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"22",18,"1","18_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"23",19,"2","19_2","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"24",19,"3","19_3","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"25",20,"1","20_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"26",21,"1","21_1","Basque, Spanish","country_1","Basque Country","BC",43.2627106,-2.9252801
+"27",21,"2","21_2","Basque, Spanish","country_1","Basque Country","BC",43.2627106,-2.9252801
+"28",22,"1","22_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"29",23,"1","23_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"30",24,"2","24_2","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"31",25,"1","25_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"32",26,"1","26_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"33",26,"2","26_2","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"34",27,"1","27_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"35",27,"2a","27_2a","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"36",27,"2b","27_2b","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"37",28,"2","28_2","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"38",29,"1","29_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"39",29,"2","29_2","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"40",30,"1","30_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"41",31,"2","31_2","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"42",32,"1","32_1","Dutch, Other","country_1","Netherlands","NL",52.132633,5.291266
+"43",32,"2","32_2","Dutch, Other","country_1","Netherlands","NL",52.132633,5.291266
+"44",33,"1","33_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"45",34,"1","34_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"46",35,"1","35_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"47",36,"1","36_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"48",36,"2","36_2","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"49",37,"1","37_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"50",38,"1","38_1","Swiss German, Std German, French, English","country_1","Switzerland","CH",46.818188,8.227512
+"51",39,"1","39_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"52",40,"1","40_1","French, German, Creole, Other","country_1","France","FR",46.227638,2.213749
+"53",41,"1","41_1","Dutch, Other","country_1","Netherlands","NL",52.132633,5.291266
+"54",42,"1","42_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"55",42,"2","42_2","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"56",43,"1","43_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"57",44,"1","44_1","French-English","country_1","Canadian city",NA,NA,NA
+"58",45,"1","45_1","Swiss German, Std German, French, English","country_1","Switzerland","CH",46.818188,8.227512
+"59",46,"1","46_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"60",47,"1","47_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"61",48,"1","48_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"62",49,"1","49_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"63",50,"1","50_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"64",51,"1","51_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"65",52,"1","52_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"66",53,"1","53_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"67",54,"1","54_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"68",55,"1&2","55_1&2","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"69",56,"1a","56_1a","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"70",56,"1b","56_1b","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"71",56,"2a","56_2a","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"72",56,"2b","56_2b","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"73",56,"3","56_3","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"74",57,"1","57_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"75",58,"1&2","58_1&2","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"76",58,"3","58_3","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"77",59,"1","59_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"78",59,"2","59_2","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"79",59,"3","59_3","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"80",60,"1&2","60_1&2","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"81",61,"1&3","61_1&3","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"82",62,"1&4a","62_1&4a","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"83",62,"2&4b","62_2&4b","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"84",62,"5&4a","62_5&4a","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"85",63,"1","63_1","Basque, Spanish","country_1","Basque Country","BC",43.2627106,-2.9252801
+"86",64,"1","64_1","Basque, Spanish","country_1","Basque Country","BC",43.2627106,-2.9252801
+"87",65,"1","65_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"88",66,"1","66_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"89",67,"1","67_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"90",68,"1","68_1","French, German, Creole, Other","country_1","France","FR",46.227638,2.213749
+"91",69,"3&4","69_3&4","French, German, Creole, Other","country_1","France","FR",46.227638,2.213749
+"92",70,"1","70_1","French, German, Creole, Other","country_1","France","FR",46.227638,2.213749
+"93",71,"1","71_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"94",71,"2","71_2","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"95",72,"1","72_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"96",73,"1","73_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"97",74,"1","74_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"98",74,"2","74_2","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"99",75,"1","75_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"100",75,"2","75_2","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"101",75,"3","75_3","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"102",76,"1","76_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"103",77,"1","77_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"104",78,"1a","78_1a","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"105",78,"1b","78_1b","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"106",78,"2","78_2","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"107",79,"1","79_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"108",79,"2","79_2","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"109",80,"1","80_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"110",81,"1","81_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"111",82,"1","82_1","Italian, Other","country_1","Italy","IT",41.87194,12.56738
+"112",82,"2","82_2","Italian, Other","country_1","Italy","IT",41.87194,12.56738
+"113",82,"3","82_3","Italian, Other","country_1","Italy","IT",41.87194,12.56738
+"114",83,"1","83_1","Italian, Other","country_1","Italy","IT",41.87194,12.56738
+"115",84,"1","84_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"116",85,"1","85_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"117",86,"1","86_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"118",87,"2a","87_2a","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"119",87,"2b","87_2b","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"120",88,"1","88_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"121",89,"1","89_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"122",89,"2","89_2","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"123",90,"1","90_1","English, Other","country_1","New Zealand","NZ",-40.900557,174.885971
+"124",91,"1","91_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"125",92,"1","92_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"126",93,"1","93_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"127",94,"1","94_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"128",95,"1","95_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"129",96,"1","96_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"130",97,"1","97_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"131",98,"1","98_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"132",99,"1","99_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"133",100,"1","100_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"134",101,"1","101_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"135",102,"1A","102_1A","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"136",102,"1B","102_1B","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"137",102,"2","102_2","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"138",102,"3","102_3","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"139",103,"1","103_1","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"140",103,"2","103_2","Catalan, Spanish, Other","country_1","Spain","ES",40.463667,-3.74922
+"141",104,"1","104_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"142",105,"1","105_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"143",106,"1","106_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"144",107,"1","107_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"145",108,"1","108_1","English, Welsh, Spanish, Other","country_1","United Kingdom","GB",55.378051,-3.435973
+"146",109,"1","109_1","Spanish","country_1","Argentina","AR",-38.416097,-63.616672
+"147",110,"1","110_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"148",111,"1","111_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"149",111,"3","111_3","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"150",112,"1","112_1","English, Mandarin, Malay, Tamil/Hindi","country_1","Singapore","SG",1.352083,103.819836
+"151",113,"1","113_1","English, Maltese","country_1","Malta","MT",35.937496,14.375416
+"152",114,"1","114_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"153",115,"1","115_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"154",115,"2","115_2","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"155",116,"1","116_1","Finish, Russian","country_1","Finland","FI",61.92411,25.748151
+"156",117,"1","117_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"157",118,"1","118_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"158",119,"1","119_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"159",120,"1","120_1","English, Spanish, Mandarin, German, French, Other","country_1","United States","US",37.09024,-95.712891
+"160",121,"1","121_1","Basque, Spanish","country_1","Basque Country","BC",43.2627106,-2.9252801
+"161",122,"1","122_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"162",123,"1","123_1","French, German, Creole, Other","country_1","France","FR",46.227638,2.213749
+"163",124,"1","124_1","English","country_1","Australia","AU",-25.274398,133.775136
+"164",125,"1","125_1","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"165",125,"1,2,3","125_1,2,3","English, Spanish, Dutch, Mandarin, Catalan, French, Other","country_1","Not provided",NA,NA,NA
+"166",126,"1","126_1","French, German, Creole, Other","country_1","France","FR",46.227638,2.213749
+"167",127,"1","127_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_1","Canada","CA",56.130366,-106.346771
+"168",28,"2","28_2","English, Mandarin","country_2","Malaysia","MY",4.210484,101.975766
+"169",35,"1","35_1","Swiss German, Std German, French, English","country_2","Switzerland","CH",46.818188,8.227512
+"170",43,"1","43_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_2","Canada","CA",56.130366,-106.346771
+"171",45,"1","45_1","French, English, Mandarin, Cantonese, Tagalog, Spanish, Other","country_2","Canada","CA",56.130366,-106.346771
+"172",46,"1","46_1","English, Spanish, Mandarin, German, French, Other","country_2","United States","US",37.09024,-95.712891
+"173",96,"1","96_1","English, German","country_2","Germany","DE",51.165691,10.451526
+"174",109,"1","109_1","Korean","country_2","South Korea","KR",35.907757,127.766922
+"175",114,"1","114_1","English, Spanish, Mandarin, German, French, Other","country_2","United States","US",37.09024,-95.712891
+"176",109,"1","109_1","English, Spanish, Mandarin, German, French, Other","country_3","United States","US",37.09024,-95.712891

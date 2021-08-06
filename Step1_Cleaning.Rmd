@@ -1,0 +1,351 @@
+---
+title: "Defining Bilingualism in Infancy and Toddlerhood: A Scoping Review"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Cleaning data
+
+```{r}
+
+library(plyr)
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(tidyverse)
+
+data <- read.csv("Step1_data/data.csv", header=T)
+```
+
+Let's clean the Geo Column. First we will create a new column called "location"
+```{r}
+unique(data$geo)
+data$geo <- as.character(data$geo)
+data <- data %>%
+  mutate(location = case_when(
+    geo == "idk" ~ "Not provided",
+    geo == "South Florida, FL, US" ~"Florida (South Florida), United States",
+    geo == "New Jersey, U.S." ~"New Jersey, United States",
+    geo == "Montréal, Québec"  ~ "Québec (Montréal), Canada",
+    geo == "metropolitan area in Southern California" ~ "California (Southern California), United States",
+    geo == "London and surrounding areas"  ~ "London, United Kingdom",
+    geo ==  "Washington, USA"  ~ "Washington, United States",
+    geo == "Montréal, Canada" ~ "Québec (Montréal), Canada",
+    geo == "Seattle, Washington, U.S."  ~ "Washington, United States",
+    geo == "Singapore and Malaysia"  ~ "Singapore,Malaysia",
+    geo ==  "Northern California, US"  ~ "California (Northern California), United States",
+    geo == "Eastern Canada for Bilinguals and Canton ofGeneva, Switzerland for monolinguals" ~ "Québec (Eastern Canada), Canada & Canton of Geneva, Switzerland",
+    geo == "Davis, CA US" ~ "California (Davis), United States",
+    geo == "San Diego, California (monolinguals) & Montréal Canada (bilinguals)" ~"California (San Diego), United States & Québec (Montréal), Canada",
+    geo == "Canadian City"  ~ "Canadian city",
+    geo == "Geneva, Switzerland for Monolinguals and Montreal, Canada for Bilinguals" ~ "Geneva, Switzerland & Québec (Montréal), Canada",
+    geo == "Barcelona, Spain & Washington, D.C. US"  ~ "Barcelona, Spain & District of Columbia, United States" ,
+    geo == "San Antonio, Texas, U.S." ~ "Texas (San Antonio), United States" ,
+    geo == "spain" ~ "Spain",
+    geo == "vancouver, Canada"  ~ "Vancouver, Canada",
+    geo == "Donostia–San Sebastian (Basque Country, Spain)" ~ "Donostia–San Sebastian, Basque Country",
+    geo == "Reading, England, UK" ~ "England (Reading), United Kingdom",
+    geo == "North Wales, Wales, U.K"  ~ "Wales (North Wales), United Kingdom",  
+    geo ==  "Boston, Massachussets USA" ~  "Massachussets (Boston), United States",
+    geo == "Bangor, Wales, UK" ~ "Wales (Bangor), United Kingdom",
+    geo ==  "Buenos Aires, Argentina; Seoul, South Korea, United States"  ~  "Buenos Aires, Argentina; Seoul, South Korea; & United States",
+    geo == "Ann Arbor, Michigan, USA, Tübingen, Germany, Kiel, Germany, and Aachen, Germany" ~ "Michigan(Ann Arbor), United States; Tübingen, Kiel,& Aachen, Germany",
+    geo == "San Diego, California" ~ "California (San Diego, United States",
+    geo == "New Englad, U.S." ~ "New Englad, United States",
+    geo ==  "New York, U.S." ~  "New York, United States",
+    geo ==  "California, U.S." ~ "California, United States",
+    geo == "Miami, Florida, U.S." ~  "Florida (Miami), United States", 
+    geo ==  "Albuquerque, New Mexico, United States"   ~  "New Mexico (Albuquerque), United States",
+    geo == "Montréal, Canada & San Diego, California" ~ "Québec (Montréal), Canada & California (San Diego), United States",
+    geo == "Albuquerque & El Paso,New Mexico, United States" ~  "New Mexico (Albuquerque & El Paso), United States" ,
+    geo == "Greater Sydney region, NSW, Australia" ~ "New South Wales (Greater Sydney Region), Australia",
+    geo == "New Zeland" ~ "New Zealand",
+    TRUE ~ geo
+  ))
+unique(data$location)
+```
+
+
+```{r}
+city_country <- colsplit(data$location,  ", ", names =  c('City','Country'))
+
+city_country <- city_country %>%
+  mutate(Country = case_when(
+    Country == "Singapore & Malaysia"  ~ "Singapore,Malaysia", 
+    Country == "Canada & Canton of Geneva, Switzerland" ~ "Canada,Switzerland",
+    Country == "United States & Québec (Montréal), Canada" ~ "United States,Canada",
+    Country ==  "Switzerland & Québec (Montréal), Canada"   ~  "Switzerland,Canada",
+    Country == "Canadian city"    ~ "Canada",
+    Country == "Spain & District of Columbia, United States"  ~ "Spain,United States",
+    Country == "United States; Tübingen, Kiel,& Aachen, Germany" ~ "United States,Germany",
+    Country == "Argentina; Seoul, South Korea; & United States" ~ "Argentina,South Korea,United States", 
+    Country == "Canada & California (San Diego), United States" ~ "Canada,United States",
+    Country == "" ~ City,
+    TRUE ~ Country
+  ))
+unique(city_country$Country)
+
+data$country <- city_country$Country
+
+
+
+
+```
+Let's clean the langs column:
+
+```{r}
+#unique(data$langs)
+data$langs <- as.character(data$langs)
+
+data <- data %>%
+  mutate(languages = case_when(
+    langs == "ENG-X(" ~ "English-Other",
+    langs == "Catalan-SPN (close), Catalan-X(distant)" ~ "Catalan-Spanish & Catalan-Other", 
+    langs == "ENG-FRN" ~ "French-English",
+    langs == "Swiss German, Std German, Other" ~ "Swiss German- or Std German-Other", 
+    langs == "FRN-X" ~ "French-Other" ,
+    langs == "ENGorFRN-X" ~ "English or French-Other" ,
+    langs == "FRN-ENG"  ~ "French-English",
+    langs == "ENG-SPN" ~ "English-Spanish",
+    langs == "SPN-ENG" ~ "English-Spanish",
+    langs ==  "ENG-X"  ~ "English-Other",
+    langs == "Catalan-SPN" ~ "Catalan-Spanish",
+    langs == "SPN-Catalan" ~ "Catalan-Spanish",
+    langs == "Catalan-SPN-ENG"  ~ "Catalan-Spanish-English",
+    langs ==  "ENG-FRN & ENG-CHI" ~  "French-English & English-Mandarin or Cantonese",
+    code == 117 ~ "English-Mandarin",
+    langs ==  "ENG-CHI"   ~ "English-Mandarin or Cantonese",
+    langs == "ITA-X" ~ "Italian-Other",
+    langs == "ENG-Welsh" ~ "English-Welsh",
+    langs == "ENG-Tagalog"~ "English-Tagalog",
+    langs ==  "ENG-GER" ~  "English-German",
+    langs ==  "Mandarin chinese-X" ~  "Mandarin-Other",
+    langs == "ENG-FRN & ENG-SPN" ~ "French-English & English-Spanish", 
+    langs == "ENG-(English,Mandarin, Malay, or Tamil/Hindi)" ~ "English, Mandarin, Malay, or Tamil/Hindi",
+    langs == "FREN-Créole"  ~ "French-Créole", 
+    langs == "FREN-X" ~ "French-Other",
+    langs == "ENG-Maltese" ~ "English-Maltese",
+    langs == "idk" ~ "Was not provided",
+    langs == "FIN-RUS" ~ "Finish-Russian",
+    langs == "English-X" ~ "English-Other" ,
+    langs == "Dutch-X"  ~ "Dutch-Other" ,
+    TRUE ~ langs
+  ))
+    
+unique(data$languages)
+```
+
+Let's clean the monolingual definition column:
+
+```{r}
+unique(data$mono_def_present)
+
+data <- data %>%
+  mutate(mono_def_present = case_when(
+    mono_def_present == "not present" ~ "Not Present",
+    mono_def_present == "y"  ~ "Present", 
+    mono_def_present == "yes"  ~ "Present", 
+    mono_def_present == "999" ~  "NA"
+  ))
+    
+unique(data$mono_def_present)
+```
+
+Let's clean the bilingual definition column:
+
+```{r}
+unique(data$bi_def_present)
+data$bi_def_present<- as.character(data$bi_def_present)
+data$concept<- as.character(data$concept)
+
+data <- data %>%
+  mutate(bi_def_present = case_when(
+    bi_def_present == "no" ~ "Not Present",
+    bi_def_present == "yes" ~ "Present",
+    bi_def_present == "Yes" ~ "Present",
+  ))
+    
+
+
+data <- data %>%
+  mutate(bi_concept = case_when(
+   concept == "exposure" ~ "Exposure",
+   concept == "vocabulary" ~ "Vocabulary",
+   concept == "exposure+LENA"  ~ "Exposure" ,
+   concept == "caregivers status" ~ "Caregivers Status",
+   concept == "idk" ~ "Can't be determined",
+  ))
+
+unique(data$bi_concept)
+```
+
+Let's clean the monolingual cutoff:
+
+```{r}
+unique(data$mono_cutoff)
+data$mono_cutoff<- as.character(data$mono_cutoff)
+data$mono_cutoff <- str_replace_all(data$mono_cutoff,"%","")
+
+data$mono_cutoff[is.na(data$mono_cutoff)] <- "999"
+data <- data %>%
+  mutate(cutoff_mono = case_when(
+    mono_cutoff == "999" ~ "NA",
+    mono_cutoff == "idk" ~ "None",
+    mono_cutoff == "IDK" ~ "None",
+    mono_cutoff == "none" ~ "None",
+    mono_cutoff == "95(100 for SPN exposed group)" ~ "95% (100% for SPN group)",
+    TRUE ~ paste(mono_cutoff,"%", sep = "")
+  ))
+    
+unique(data$cutoff_mono)
+```
+
+Let's clean the bilingual cutoff:
+
+```{r}
+unique(data$bi_cutoff)
+data$bi_cutoff<- as.character(data$bi_cutoff)
+
+
+data <- data %>%
+  mutate(cutoff_bi = case_when(
+    bi_cutoff == "none" ~ "None",
+    bi_cutoff == "None" ~ "None",
+    bi_cutoff == "idk" ~ "None",
+    bi_cutoff == "IDK" ~ "None",
+    bi_cutoff == "idK" ~ "None",
+    bi_cutoff == "20hr" ~ "20hrs",
+    bi_cutoff == "8hr" ~ "8hrs",
+    bi_cutoff == "10hr" ~ "10hrs",
+    TRUE ~ paste(bi_cutoff,"%", sep = "")
+  ))
+    
+unique(data$cutoff_bi)
+```
+
+Let's clean the authors column:
+
+```{r}
+#ls(data)
+unique(data$X.study)
+unique(data$articles)
+data$citation<- as.character(data$citation)
+data$X.study<- as.character(data$X.study)
+
+citations <- colsplit(data$citation,  "[)]", names =  c('Studies','Titles'))
+
+data$articles <- paste(citations$Studies,")", sep = "")
+
+data <- data %>%
+  mutate(study_num = case_when(
+    X.study == "#1" ~ "1",
+    TRUE ~ X.study
+  ))
+```
+
+Let's clean the bilingual count:
+
+```{r}
+unique(data$n_bi)
+data$n_bi<- as.character(data$n_bi)
+
+data <- data %>%
+  mutate(bi_n = case_when(
+    n_bi == "16 8mo, and 20 10mo" ~ "Bilinguals= 36",
+    n_bi == "IDK" ~ "Bilinguals= Not provided",
+    TRUE ~ paste("Bilinguals=",n_bi, sep = " ")
+  ))
+    
+unique(data$bi_n)
+```
+
+Let's clean the monolingual count:
+
+```{r}
+unique(data$n_mono)
+data$n_mono<- as.character(data$n_mono)
+
+
+data <- data %>%
+  mutate(mono_n = case_when(
+    n_mono == "143 (79 ENG, 64 SPN)"~ "Monolinguals= 143",
+    n_mono == "IDK" ~ "Monolinguals= Not provided",
+    TRUE ~ paste("Monolinguals=",n_mono, sep = " ")
+  ))
+    
+unique(data$mono_n)
+```
+
+Let's merge both mono and bi count to create the list we need:
+
+```{r}
+unique(data$n_mono)
+data$groups<- paste(data$mono_n,data$bi_n, sep = "\r\n")
+
+
+unique(data$groups)
+```
+
+Clean the country table
+```{r}
+data$new_code <- paste(data$code,data$study_num,sep = "_")
+
+country_table <- data %>%
+  select(code,study_num,country, new_code,languages) %>%
+  separate(country, c("country_1", "country_2", "country_3"),  sep = ",") %>%
+  gather(label,country,country_1:country_3,factor_key=TRUE) %>%
+  filter(!is.na(country))
+
+lat_long <- read.csv("Step1_data/lat_long.csv", header=T)
+
+
+  
+```
+Clean the Languages column of geo_data
+```{r}
+geo_data <- left_join(country_table, lat_long, by= "country") 
+
+geo_data <- geo_data %>%
+  mutate(languages = case_when(
+    country == "Argentina" ~ "Spanish",
+    country == "Australia" ~ "English",
+    country == "Basque Country" ~ "Basque, Spanish",
+    country == "Canada" ~ "French, English, Mandarin, Cantonese, Tagalog, Spanish, Other",
+    country == "Finland" ~ "Finish, Russian",
+    country == "France" ~ "French, German, Creole, Other",
+    country == "Germany" ~ "English, German",
+    country == "Italy" ~ "Italian, Other",
+    country == "Malaysia" ~ "English, Mandarin",
+    country == "Malta" ~ "English, Maltese",
+    country == "Netherlands" ~ "Dutch, Other",
+    country == "New Zealand" ~ "English, Other",
+    country == "Not provided" ~ "English, Spanish, Dutch, Mandarin, Catalan, French, Other",
+  country == "Singapore" ~ "English, Mandarin, Malay, Tamil/Hindi",
+  country == "South Korea" ~ "Korean",
+  country == "Spain" ~ "Catalan, Spanish, Other",
+  country == "Switzerland" ~ "Swiss German, Std German, French, English",
+  country == "United Kingdom" ~ "English, Welsh, Spanish, Other",
+  country == "United States" ~ "English, Spanish, Mandarin, German, French, Other",
+    TRUE ~ languages
+  ))
+```
+
+Create table with the citations from the review and a database with the geographic information:
+```{r}
+ls(data)
+table <- data %>%
+  select(code,study_num,year,age_group,location,country,groups,languages,mono_def_present,mono_definition,mono_concept, bi_concept,bi_def_present,bi_definition,bi_measure,bi_definition,cutoff_mono,cutoff_bi,attrition.n.,Data.collection,lab_home,citation,articles,if.comparing..diff.)
+
+short_citations <- data %>%
+  select(code,articles,study_num)
+
+
+write.csv(short_citations, file = 'Step2_data/citation_list.csv', fileEncoding="macroman")
+write.csv(table, file = 'Step2_data/step2_data.csv')
+write.csv(geo_data, file = 'Step2_data/geo_data.csv')
+```
+
